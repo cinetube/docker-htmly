@@ -4,8 +4,8 @@ MAINTAINER John Miller <john@harleydigital.com>
 # Get the packages
 RUN apk add --no-cache \
         bash nginx ca-certificates \
-        php5-fpm php5-json php5-zlib php5-xml php5-gd php5-pdo \
-        php5-phar php5-openssl php5-zip php5-iconv php5-mcrypt musl \
+        php7-fpm php7-json php7-zlib php7-xml php7-gd php7-pdo \
+        php7-phar php7-openssl php7-zip php7-iconv php7-mcrypt musl \
         && rm -rf /var/cache/apk/*
 
 # add the necessary files
@@ -15,7 +15,7 @@ ADD run.sh /
 ADD index.php /
 
 # get the HTMLy installer
-ADD https://github.com/danpros/htmly/releases/download/v2.7.4/installer.php /
+ADD https://github.com/danpros/htmly/releases/download/v2.8.1/online-installer.php /
 
 # make the run script executable
 RUN chmod +x /run.sh
