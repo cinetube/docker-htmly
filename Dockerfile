@@ -15,7 +15,7 @@ ADD run.sh /
 ADD index.php /
 
 # get the HTMLy installer
-ADD https://github.com/danpros/htmly/releases/download/v2.8.1/online-installer.php /
+ADD https://github.com/danpros/htmly/releases/download/v2.7.4/installer.php /
 
 # make the run script executable
 RUN chmod +x /run.sh
